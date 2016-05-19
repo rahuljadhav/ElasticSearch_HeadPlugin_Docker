@@ -7,7 +7,7 @@ set -eo pipefail
 
 # Set environment
 ES_CLUSTER_NAME=${ES_CLUSTER_NAME:-"vexiere_es_cluster"}
-ES_CFG_FILE="/opt/elasticsearch-1.7.1/config/elasticsearch.yml"
+ES_CFG_FILE="/opt/elasticsearch-2.3.3/config/elasticsearch.yml"
 
 # Reset/set to value to avoid errors in env processing
 ES_CFG_URL=${ES_CFG_FILE}
@@ -29,7 +29,7 @@ done
 
 # if `docker run` first argument start with `--` the user is passing launcher arguments
 if [[ "$1" == "-"* || -z $1 ]]; then
-  /opt/elasticsearch-1.7.1/bin/elasticsearch --config=${ES_CFG_FILE} "$@"
+  /opt/elasticsearch-2.3.3/bin/elasticsearch --config=${ES_CFG_FILE} "$@"
 else
   exec "$@"
 fi

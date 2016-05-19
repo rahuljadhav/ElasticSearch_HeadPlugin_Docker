@@ -1,4 +1,4 @@
-FROM java:7
+FROM java:8
 
 WORKDIR /opt
 
@@ -11,8 +11,7 @@ RUN rm elasticsearch-2.3.3.tar.gz
 WORKDIR /opt/elasticsearch-2.3.3
 
 
-RUN ./bin/plugin -install elasticsearch/elasticsearch-cloud-aws/2.7.1 --silent --timeout 2m
-RUN ./bin/plugin -install lukas-vlcek/bigdesk --silent --timeout 2m
+RUN ./bin/plugin -install cloud-aws --silent --timeout 2m
 RUN ./bin/plugin -install mobz/elasticsearch-head --silent --timeout 2m
 
 # Expose volumes
