@@ -24,7 +24,7 @@ Supports version 2.7.1
 
 #### Build
 
-		cd ElasticSearch__HeadPlugin_Docker
+		cd ElasticSearch_HeadPlugin_Docker
         docker build -t elastic_search .
 
 #### Run 
