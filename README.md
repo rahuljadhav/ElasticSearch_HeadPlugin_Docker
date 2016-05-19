@@ -1,7 +1,7 @@
 ## ElasticSearch with Cluster Docker file
 
 This is a highly configurable elastic search docker file.   
-**Supports Elasticsearch version  1.7.1**  
+**Supports Elasticsearch version  2.3.3**  
 Configuration driven clustering is supported.
 
 
@@ -9,9 +9,6 @@ Configuration driven clustering is supported.
 Installed plugins:
 
 - [AWS Cloud](https://github.com/elastic/elasticsearch-cloud-aws) - Allows usage of AWS API for unicast discovery and S3 repositories for snapshots.  
-Supports version 2.7.1
-
-- [BigDesk](http://bigdesk.org/): Provides live charts and statistics for an Elasticsearch cluster. You can open a browser and navigate to `http://localhost:9200/_plugin/bigdesk/` it will open Bigdesk and auto-connect to the ES node. 
 
 - [Elasticsearch Head](http://mobz.github.io/elasticsearch-head/): A web front end for an Elasticsearch cluster. Open `http://localhost:9200/_plugin/head/` and it will run it as a plugin within the Elasticsearch cluster.
 
