@@ -10,9 +10,10 @@ RUN rm elasticsearch-2.3.3.tar.gz
 
 WORKDIR /opt/elasticsearch-2.3.3
 
+ADD config /opt/elasticsearch-2.3.3/config/elasticsearch.yml
 
-RUN ./bin/plugin -install cloud-aws --silent --timeout 2m
-RUN ./bin/plugin -install mobz/elasticsearch-head --silent --timeout 2m
+RUN ./bin/plugin install cloud-aws --silent --timeout 2m
+RUN ./bin/plugin install mobz/elasticsearch-head --silent --timeout 2m
 
 # Expose volumes
 VOLUME [/opt/elasticsearch-2.3.3/data]
